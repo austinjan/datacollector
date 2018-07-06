@@ -1,0 +1,56 @@
+#!/bin/sh
+# trigger by /etc/udev/rules.d/sdcard.rules
+SDPATHS=$(mount|grep mmc|awk '$2 == "on" {print $3}')
+#echo sd card mount path is $SDPATH >> /home/dest/script_log
+if [ ! -d /home/dest ]; then
+  mkdir /home/dest
+fi
+for SDPATH in $SDPATHS
+do
+  # check images
+  if [ ! -d "/home/dest/image" ]; then
+    echo Create /home/dest/image path.. >> /home/dest/script_log
+    mkdir /home/dest/image
+  fi 
+  if [ -d "$SDPATH/image" ]; then
+    rm /home/dest/image/*
+    echo delete all image files .. >> /home/dest/script_log
+    cp $SDPATH/image/* /home/dest/image
+    echo cp files ot /home/dest/image >> /home/dest/script_log
+  else
+     echo Can not find path $SDPATH/image in sd card... >> /home/dest/script_log	
+  fi
+
+  #check datas
+  if [ ! -d "/home/dest/data" ]; then
+    echo Create /home/dest/data path.. >> /home/dest/script_log
+    mkdir /home/dest/data
+  fi 
+  if [ -d "$SDPATH/data" ]; then
+    rm /home/dest/data/*
+    echo "delete all data files .." >> /home/dest/script_log
+    cp $SDPATH/data/* /home/dest/data
+    echo "cp files to /home/dest/data" >> /home/dest/script_log
+  else
+     echo "Can not find path $SDPATH/data in sd card..." >> /home/dest/script_log
+  fi
+
+  #check update firmware
+  if [ ! -d "/home/dest/update" ]; then
+    echo Create /home/dest/update path.. >> /home/dest/script_log
+    mkdir /home/dest/update
+  fi 
+  if [ -d "$SDPATH/update" ]; then
+    rm /home/dest/update/*
+    echo "delete all update files .." >> /home/dest/script_log
+    cp $SDPATH/update/* /home/dest
+    chmod +x /home/dest/RT
+    echo "cp files to /home/dest/daupdateta" >> /home/dest/script_log
+  else
+     echo "Can not find path $SDPATH/update in sd card..." >> /home/dest/script_log
+  fi
+
+done
+sync
+exit $?
+

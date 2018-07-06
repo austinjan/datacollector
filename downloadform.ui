@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DownloadForm</class>
+ <widget class="QWidget" name="DownloadForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#DownloadForm{
+	font: 24pt &quot;DejaVu Sans&quot;;  
+    color: white;
+     background:qlineargradient(spread:pad, x1:0.494318, y1:0, x2:0.494, y2:1, stop:0 rgba(0, 30, 65, 255), stop:1 rgba(112, 124, 165, 255));
+}
+
+QMessageBox
+{
+    font: 28pt &quot;DejaVu Sans&quot;;  
+    color: white;  
+	background-color: qlineargradient(spread:pad, x1:0.488636, y1:0, x2:0.511364, y2:1, stop:0 rgba(136, 50, 7, 255), stop:1 rgba(200, 57, 29, 255));
+}
+
+QLabel
+{
+   background-color: rgba(255,255,255,10); 
+   font: 24pt &quot;DejaVu Sans&quot;;  
+   color: white;
+}
+
+QPushButton
+{
+	background-color: rgba(255,255,255,10); 
+   	font: 24pt &quot;DejaVu Sans&quot;;  
+   	color: white;
+   	border-style: outset;
+   	border-width: 2px;
+   	border-color: beige;
+	padding: 4px;
+}
+
+QGroupBox
+{
+	background-color: rgba(255,255,255,10); 
+	font: 20pt &quot;DejaVu Sans&quot;;  
+   	color: white;
+}
+
+QPushButton:pressed 
+{
+	font: 24pt &quot;DejaVu Sans&quot;;  
+   	color: white;
+	background-color: rgba(255,255,255,90); 
+	border-style: inset;
+	padding:4px;
+}
+
+QPushButton:disabled 
+{
+	font: 24pt &quot;DejaVu Sans&quot;;  
+	color: rgb(83, 83, 83);
+	background-color: rgba(171, 171, 171, 50);
+	padding:4px;
+}</string>
+  </property>
+  <widget class="QPushButton" name="pushButtonBack">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>320</y>
+     <width>121</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>711</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Down progress</string>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Current FIle:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QProgressBar" name="progressBarFIle">
+      <property name="value">
+       <number>24</number>
+      </property>
+      <property name="format">
+       <string>%p%</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Total Files:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QProgressBar" name="progressBarTask">
+      <property name="value">
+       <number>24</number>
+      </property>
+      <property name="format">
+       <string>%v / %m</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="labelState">
+      <property name="text">
+       <string>State...</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButtonFtpDownload">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>241</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Ftp Download</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,70 @@
+#BarcodeInputForm{
+background:qlineargradient(spread:pad, x1:0.494318, y1:0, x2:0.494, y2:1, stop:0 rgba(0, 30, 65, 255), stop:1 rgba(112, 124, 165, 255));
+}
+
+QListView {
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QListView::item:alternate {
+    background: #EEEEEE;
+}
+
+QListView::item:selected {
+    border: 1px solid #222222;
+}
+
+QListView::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ABAFE5, stop: 1 #8588B2);
+}
+
+QListView::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+
+QListView::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+}
+
+QMessageBox
+{
+      
+	background-color: qlineargradient(spread:pad, x1:0.488636, y1:0, x2:0.511364, y2:1, stop:0 rgba(136, 50, 7, 255), stop:1 rgba(200, 57, 29, 255));
+}
+
+QLabel
+{
+   background-color: rgba(255,255,255,10); 
+   color: white;
+	font: 14pt "Arial";
+}
+
+QPushButton
+{
+	background-color: rgba(255,255,255,10); 
+   color: white;
+	font: 14pt "Arial";
+   border-style: outset;
+   border-width: 2px;
+   border-color: beige;
+}
+
+QPushButton:pressed 
+{
+	background-color: rgba(255,255,255,90); 
+	border-style: inset;
+}
+
+QPushButton:disabled 
+{
+	color: rgb(83, 83, 83);
+	background-color: rgba(171, 171, 171, 50);
+}
+
+QLineEdit
+{
+    
+}

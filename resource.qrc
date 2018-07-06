@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>images/casday_logo.jpg</file>
+        <file>images/login.png</file>
+        <file>images/settings.png</file>
+        <file>images/recipe.png</file>
+        <file>images/black_background_metal-wallpaper-800x480.jpg</file>
+        <file>images/rsz_checked.png</file>
+    </qresource>
+</RCC>

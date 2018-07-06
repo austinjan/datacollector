@@ -1,0 +1,2 @@
+SUBSYSTEM=="block",ACTION=="add",RUN+="/home/sdcard-autorun"
+#RUN+="/home/sdcard-autorun"
